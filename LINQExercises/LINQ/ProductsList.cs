@@ -69,183 +69,183 @@ namespace LINQ
             // 1. Obtener todos los productos de la lista.
             #region
 
-            //foreach (var productos in products.Select(p=>p)) 
-            //{
-            //    Console.WriteLine($" {productos.Id}  | {productos.Descripcion} | {productos.Nombre} | {productos.Precio}  {productos.FechaCreacion} |  {productos.Stock} |  {productos.Categoria}");
-            //    Console.WriteLine();
-            //}
+            foreach (var productos in products.Select(p => p))
+            {
+                Console.WriteLine($" {productos.Id}  | {productos.Descripcion} | {productos.Nombre} | {productos.Precio}  {productos.FechaCreacion} |  {productos.Stock} |  {productos.Categoria}");
+                Console.WriteLine();
+            }
 
             #endregion
 
             //2. Obtener los nombres de todos los productos.
 
             #region
-            //foreach (var obtenerNombres in products.Select(n=>n.Nombre)) 
-            //{
-            //    Console.WriteLine(obtenerNombres);
-            //}
+            foreach (var obtenerNombres in products.Select(n => n.Nombre))
+            {
+                Console.WriteLine(obtenerNombres);
+            }
             #endregion
 
             //3. Obtener los productos cuyo precio sea mayor a 500
 
             #region
-            //foreach(var mayor500 in products.Where(p => p.Precio > 500))
-            //{
-            //    Console.WriteLine($" {mayor500.Id}  | {mayor500.Descripcion} | {mayor500.Nombre} | {mayor500.Precio}  {mayor500.FechaCreacion} |  {mayor500.Stock} |  {mayor500.Categoria}");
-            //}
+            foreach (var mayor500 in products.Where(p => p.Precio > 500))
+                {
+                    Console.WriteLine($" {mayor500.Id}  | {mayor500.Descripcion} | {mayor500.Nombre} | {mayor500.Precio}  {mayor500.FechaCreacion} |  {mayor500.Stock} |  {mayor500.Categoria}");
+                }
 
             #endregion
 
 
             // 4. Obtener los productos con stock menor a 10.
             #region
-            //foreach (var stockMenor10 in products.Where(p => p.Stock < 10))
-            //{
-            //    Console.WriteLine($" {stockMenor10.Id}  | {stockMenor10.Descripcion} | {stockMenor10.Nombre} | {stockMenor10.Precio}  {stockMenor10.FechaCreacion} |  {stockMenor10.Stock} |  {stockMenor10.Categoria}");
-            //}
+            foreach (var stockMenor10 in products.Where(p => p.Stock < 10))
+                {
+                    Console.WriteLine($" {stockMenor10.Id}  | {stockMenor10.Descripcion} | {stockMenor10.Nombre} | {stockMenor10.Precio}  {stockMenor10.FechaCreacion} |  {stockMenor10.Stock} |  {stockMenor10.Categoria}");
+                }
             #endregion
 
             // 5. Obtener los productos de la categoría "Electrónica"
 
             #region
-            //foreach(var categoriaElectronica in products.Where(p=>p.Categoria =="Electrónica"))
-            //{
-            //    Console.WriteLine($" {categoriaElectronica.Id}  | {categoriaElectronica.Descripcion} | {categoriaElectronica.Nombre} | {categoriaElectronica.Precio}  {categoriaElectronica.FechaCreacion} |  {categoriaElectronica.Stock} |  {categoriaElectronica.Categoria}");
-            //}
+            foreach (var categoriaElectronica in products.Where(p => p.Categoria == "Electrónica"))
+            {
+                Console.WriteLine($" {categoriaElectronica.Id}  | {categoriaElectronica.Descripcion} | {categoriaElectronica.Nombre} | {categoriaElectronica.Precio}  {categoriaElectronica.FechaCreacion} |  {categoriaElectronica.Stock} |  {categoriaElectronica.Categoria}");
+            }
 
             #endregion
 
             // 6. Obtener los productos cuyo nombre comience con la letra 'L'
 
             #region
-            //foreach(var productoConL in products.Where(p => p.Nombre.StartsWith("L")))
-            //{
-            //    Console.WriteLine($" {productoConL.Id}  | {productoConL.Descripcion} | {productoConL.Nombre} | {productoConL.Precio}  {productoConL.FechaCreacion} |  {productoConL.Stock} |  {productoConL.Categoria}");
-            //}
+            foreach (var productoConL in products.Where(p => p.Nombre.StartsWith("L")))
+            {
+                Console.WriteLine($" {productoConL.Id}  | {productoConL.Descripcion} | {productoConL.Nombre} | {productoConL.Precio}  {productoConL.FechaCreacion} |  {productoConL.Stock} |  {productoConL.Categoria}");
+            }
 
             #endregion
 
             // 7. Obtener los productos cuyo precio esté entre 100 y 500.
 
             #region
-            //foreach (var precioEntre in products.Where(p=>p.Precio <=500  & p.Precio >=100))
-            //{
-            //    Console.WriteLine($" {precioEntre.Id}  | {precioEntre.Descripcion} | {precioEntre.Nombre} | {precioEntre.Precio}  {precioEntre.FechaCreacion} |  {precioEntre.Stock} |  {precioEntre.Categoria}");
-            //}
+            foreach (var precioEntre in products.Where(p => p.Precio <= 500 & p.Precio >= 100))
+            {
+                Console.WriteLine($" {precioEntre.Id}  | {precioEntre.Descripcion} | {precioEntre.Nombre} | {precioEntre.Precio}  {precioEntre.FechaCreacion} |  {precioEntre.Stock} |  {precioEntre.Categoria}");
+            }
             #endregion
 
             // 8. Obtener los productos ordenados por precio ascendente.
 
             #region
 
-            //var precioAsc = from a in products
-            //                orderby a.Precio ascending 
-            //                select a;
+            var precioAsc = from a in products
+                            orderby a.Precio ascending
+                            select a;
 
-            //foreach (var item in precioAsc)
-            //{
-            //    Console.WriteLine($" {item.Id}  | {item.Descripcion} | {item.Nombre} | {item.Precio}  {item.FechaCreacion} |  {item.Stock} |  {item.Categoria}");
-            //}
+            foreach (var item in precioAsc)
+            {
+                Console.WriteLine($" {item.Id}  | {item.Descripcion} | {item.Nombre} | {item.Precio}  {item.FechaCreacion} |  {item.Stock} |  {item.Categoria}");
+            }
             #endregion
 
             // 9. Obtener los productos ordenados por precio descendente.
             #region
-            //var precioDesc = from a in products
-            //                orderby a.Precio descending
-            //                select a;
+            var precioDesc = from a in products
+                             orderby a.Precio descending
+                             select a;
 
-            //foreach (var item in precioDesc)
-            //{
-            //    Console.WriteLine($" {item.Id}  | {item.Descripcion} | {item.Nombre} | {item.Precio}  {item.FechaCreacion} |  {item.Stock} |  {item.Categoria}");
-            //}
+            foreach (var item in precioDesc)
+            {
+                Console.WriteLine($" {item.Id}  | {item.Descripcion} | {item.Nombre} | {item.Precio}  {item.FechaCreacion} |  {item.Stock} |  {item.Categoria}");
+            }
             #endregion
 
             // 10. Obtener los productos ordenados por nombre en orden alfabético
 
             #region
-            //var nombreAlf = from n in products
-            //                orderby n.Nombre
-            //                select n;
+            var nombreAlf = from n in products
+                            orderby n.Nombre
+                            select n;
 
-            //foreach (var item in nombreAlf)
-            //{
-            //    Console.WriteLine($" {item.Id}  | {item.Descripcion} | {item.Nombre} | {item.Precio}  {item.FechaCreacion} |  {item.Stock} |  {item.Categoria}");
-            //}
+            foreach (var item in nombreAlf)
+            {
+                Console.WriteLine($" {item.Id}  | {item.Descripcion} | {item.Nombre} | {item.Precio}  {item.FechaCreacion} |  {item.Stock} |  {item.Categoria}");
+            }
 
             #endregion
 
             // 11. Obtener los productos ordenados por stock de mayor a menor
 
             #region
-            //var ordenarStock = from o in products
-            //                   orderby o.Stock descending
-            //                   select o;
+            var ordenarStock = from o in products
+                               orderby o.Stock descending
+                               select o;
 
-            //foreach (var stock in ordenarStock)
-            //{
+            foreach (var stock in ordenarStock)
+            {
 
-            //        Console.WriteLine($" {stock.Id}  | {stock.Descripcion} | {stock.Nombre} | {stock.Precio}  {stock.FechaCreacion} |  {stock.Stock} |  {stock.Categoria}");
+                Console.WriteLine($" {stock.Id}  | {stock.Descripcion} | {stock.Nombre} | {stock.Precio}  {stock.FechaCreacion} |  {stock.Stock} |  {stock.Categoria}");
 
-            //}
+            }
             #endregion
 
             //12. Obtener los primeros 5 productos más caros.
 
             #region
 
-            //var productosCaros = (from p in products
-            //                      orderby p.Precio descending
-            //                      select p).Take(5);
+            var productosCaros = (from p in products
+                                  orderby p.Precio descending
+                                  select p).Take(5);
 
 
-            //foreach(var productoCaro in productosCaros)
-            //{
-            //    Console.WriteLine($" {productoCaro.Id}  | {productoCaro.Descripcion} | {productoCaro.Nombre} | {productoCaro.Precio}  {productoCaro.FechaCreacion} |  {productoCaro.Stock} |  {productoCaro.Categoria}");
-            //}               
+            foreach (var productoCaro in productosCaros)
+            {
+                Console.WriteLine($" {productoCaro.Id}  | {productoCaro.Descripcion} | {productoCaro.Nombre} | {productoCaro.Precio}  {productoCaro.FechaCreacion} |  {productoCaro.Stock} |  {productoCaro.Categoria}");
+            }
 
             #endregion
 
             //13. Obtener los 10 productos con menor stock.
 
             #region
-            //var productoStock10 = (from p in products
-            //                      orderby p.Stock ascending
-            //                      select p).Take(10);
+            var productoStock10 = (from p in products
+                                   orderby p.Stock ascending
+                                   select p).Take(10);
 
-            //foreach (var stockMenor in productoStock10)
-            //{
-            //    Console.WriteLine($" {stockMenor.Id}  | {stockMenor.Descripcion} | {stockMenor.Nombre} | {stockMenor.Precio}  {stockMenor.FechaCreacion} |  {stockMenor.Stock} |  {stockMenor.Categoria}");
-            //}
+            foreach (var stockMenor in productoStock10)
+            {
+                Console.WriteLine($" {stockMenor.Id}  | {stockMenor.Descripcion} | {stockMenor.Nombre} | {stockMenor.Precio}  {stockMenor.FechaCreacion} |  {stockMenor.Stock} |  {stockMenor.Categoria}");
+            }
 
             #endregion
 
             //14. Obtener la cantidad total de productos en la lista
             #region
-            //var contarProductos = (from c in products
-            //                      select c).Count().ToString();
+            var contarProductos = (from c in products
+                                   select c).Count().ToString();
 
-            //foreach (var numeroProductos in contarProductos)
-            //{
-            //    Console.Write(numeroProductos);
-            //}
+            foreach (var numeroProductos in contarProductos)
+            {
+                Console.Write(numeroProductos);
+            }
             #endregion
 
             // 15. Obtener la suma de todos los precios de los productos
 
             #region
-            //foreach (var sumarPrecio in products.Sum(p=>p.Precio).ToString())
-            //{
-            //    Console.Write(sumarPrecio);
-            //};
+            foreach (var sumarPrecio in products.Sum(p => p.Precio).ToString())
+            {
+                Console.Write(sumarPrecio);
+            };
 
             #endregion
 
             // 16. Obtener el precio promedio de los productos
             #region
-            //foreach (var precioPromedio in products.Average(p=>p.Precio).ToString()) 
-            //{ 
-            //    Console.Write(precioPromedio);
-            //}
+            foreach (var precioPromedio in products.Average(p => p.Precio).ToString())
+            {
+                Console.Write(precioPromedio);
+            }
 
 
             #endregion
@@ -253,46 +253,42 @@ namespace LINQ
             // 17. Obtener el producto más caro
             #region
 
+            var productoCaro = (from p in products
+                                orderby p.Precio descending
+                                select p).Take(1).ToList();
 
-            //foreach (var productoCaro in products.Max(p=> p.Precio).ToString().ToList())
-            //{
-
-            //}
-
-            //var productoCaro = (from p in products
-            //                    orderby p.Precio descending
-            //                   select p).Take(1).ToList();
-
-            //foreach (var masCaro in productoCaro) 
-            //{
-            //    Console.WriteLine($" {masCaro.Id}  | {masCaro.Descripcion} | {masCaro.Nombre} | {masCaro.Precio}  {masCaro.FechaCreacion} |  {masCaro.Stock} |  {masCaro.Categoria}");
-            //}
+            foreach (var masCaro in productoCaro)
+            {
+                Console.WriteLine($" {masCaro.Id}  | {masCaro.Descripcion} | {masCaro.Nombre} | {masCaro.Precio}  {masCaro.FechaCreacion} |  {masCaro.Stock} |  {masCaro.Categoria}");
+            }
             #endregion
 
             //18. Obtener el producto más barato.
             #region
-            //var productoBarato = (from p in products
-            //                    orderby p.Precio ascending
-            //                    select p).Take(1).ToList();
+            var productoBarato = (from p in products
+                                  orderby p.Precio ascending
+                                  select p).Take(1).ToList();
 
-            //foreach (var masBarato in productoBarato)
-            //{
-            //    Console.WriteLine($" {masBarato.Id}  | {masBarato.Descripcion} | {masBarato.Nombre} | {masBarato.Precio}  {masBarato.FechaCreacion} |  {masBarato.Stock} |  {masBarato.Categoria}");
-            //}
+            foreach (var masBarato in productoBarato)
+            {
+                Console.WriteLine($" {masBarato.Id}  | {masBarato.Descripcion} | {masBarato.Nombre} | {masBarato.Precio}  {masBarato.FechaCreacion} |  {masBarato.Stock} |  {masBarato.Categoria}");
+            }
             #endregion
 
             // 19. Verificar si hay algún producto con precio mayor a 1000.
 
             #region
 
-            //bool productoMayor1000 = products.Any(p => p.Precio > 1000);
+            bool productoMayor1000 = products.Any(p => p.Precio > 1000);
 
-            //if (productoMayor1000) {
-            //    Console.WriteLine("Hay un producto con precio mayor a 1000");
-            //}
-            //else {
-            //    Console.WriteLine("No hay un producto con precio mayor a 1000");
-            //}
+            if (productoMayor1000)
+            {
+                Console.WriteLine("Hay un producto con precio mayor a 1000");
+            }
+            else
+            {
+                Console.WriteLine("No hay un producto con precio mayor a 1000");
+            }
 
             #endregion
 
@@ -301,53 +297,54 @@ namespace LINQ
 
             #region
 
-            //bool stockMayorA5 = products.All(p => p.Stock > 5);
+            bool stockMayorA5 = products.All(p => p.Stock > 5);
 
-            //if (!stockMayorA5) {
-            //    Console.WriteLine("No todos los productos tienen mas de 5 unidades en stock");
-            //}
+            if (!stockMayorA5)
+            {
+                Console.WriteLine("No todos los productos tienen mas de 5 unidades en stock");
+            }
             #endregion
 
             //21. Contar cuántos productos hay en la categoría "Audio"
             #region
 
-            //var cantidadCatAudio = products.Where(p => p.Categoria == "Audio").Count();
+            var cantidadCatAudio = products.Where(p => p.Categoria == "Audio").Count();
 
-            //Console.WriteLine($"La cantidad de productos en la categoria audio son {cantidadCatAudio}");
+            Console.WriteLine($"La cantidad de productos en la categoria audio son {cantidadCatAudio}");
 
             #endregion
 
             // 22. Agrupar los productos por categoría.
             #region
-            //var productosCategoria = from p in products
-            //                         orderby p.Categoria
-            //                         select p;
+            var productosCategoria = from p in products
+                                     orderby p.Categoria
+                                     select p;
 
-            //foreach (var agruparProductos in productosCategoria)
-            //{
-            //    Console.WriteLine($" {agruparProductos.Id}  | {agruparProductos.Descripcion} | {agruparProductos.Nombre} | {agruparProductos.Precio}  {agruparProductos.FechaCreacion} |  {agruparProductos.Stock} |  {agruparProductos.Categoria}");
-            //}
+            foreach (var agruparProductos in productosCategoria)
+            {
+                Console.WriteLine($" {agruparProductos.Id}  | {agruparProductos.Descripcion} | {agruparProductos.Nombre} | {agruparProductos.Precio}  {agruparProductos.FechaCreacion} |  {agruparProductos.Stock} |  {agruparProductos.Categoria}");
+            }
             #endregion
 
             // 23. Obtener la categoría con más productos.
 
             #region
 
-            //foreach (var categoriaMayor in products.GroupBy(p => p.Categoria).OrderByDescending(o => o.Count()).FirstOrDefault())
+            foreach (var categoriaMayor in products.GroupBy(p => p.Categoria).OrderByDescending(o => o.Count()).FirstOrDefault())
 
-            //{
-            //    Console.WriteLine($"{categoriaMayor.Categoria} | {categoriaMayor.Nombre} | {categoriaMayor.Precio}");
-            //} 
+            {
+                Console.WriteLine($"{categoriaMayor.Categoria} | {categoriaMayor.Nombre} | {categoriaMayor.Precio}");
+            }
             #endregion
 
             //24. Obtener el stock total de todos los productos
             #region
 
-            //foreach(var sumarStock in products.Sum(s=> s.Stock).ToString())
-            //{
+            foreach (var sumarStock in products.Sum(s => s.Stock).ToString())
+            {
 
-            //    Console.Write(sumarStock);
-            //}
+                Console.Write(sumarStock);
+            }
 
             #endregion
 
@@ -355,10 +352,10 @@ namespace LINQ
 
             #region
 
-            //var longitudNombre = products.Max(p => p.Nombre.Length);
-            //var productoMasLargo = products.FirstOrDefault(p => p.Nombre.Length == longitudNombre);
+            var longitudNombre = products.Max(p => p.Nombre.Length);
+            var productoMasLargo = products.FirstOrDefault(p => p.Nombre.Length == longitudNombre);
 
-            //Console.WriteLine($"{productoMasLargo.Nombre} | {productoMasLargo.Descripcion} | {productoMasLargo.Precio}");
+            Console.WriteLine($"{productoMasLargo.Nombre} | {productoMasLargo.Descripcion} | {productoMasLargo.Precio}");
 
             #endregion
 
@@ -375,12 +372,12 @@ namespace LINQ
 
             #region
 
-            //var contenerPantalla = products.Where(p => p.Descripcion.Contains("pantalla"));
+            var contenerPantalla = products.Where(p => p.Descripcion.Contains("pantalla"));
 
-            //foreach(var p in contenerPantalla)
-            //{
-            //    Console.WriteLine($"{p.Nombre} | {p.Descripcion} | {p.Precio} ");
-            //}
+            foreach (var p in contenerPantalla)
+            {
+                Console.WriteLine($"{p.Nombre} | {p.Descripcion} | {p.Precio} ");
+            }
 
 
             #endregion
@@ -388,55 +385,55 @@ namespace LINQ
             // 28. Obtener el promedio de stock de los productos de la categoría "Almacenamiento".
 
             #region
-            //var obtenerStockAlmacenamiento = products.Where(p => p.Categoria == "Almacenamiento").Average(p =>p.Stock);
+            var obtenerStockAlmacenamiento = products.Where(p => p.Categoria == "Almacenamiento").Average(p => p.Stock);
 
-            //Console.WriteLine(obtenerStockAlmacenamiento);
+            Console.WriteLine(obtenerStockAlmacenamiento);
 
             #endregion
 
             // 29. Obtener los productos creados en una fecha específica (20/12/2022)
             #region
-            //DateTime fechaABuscar = new DateTime(2023, 2, 5);
-            //var obtenerFechaEspecifica = products.Where(p => p.FechaCreacion.Date == fechaABuscar);
+            DateTime fechaABuscar = new DateTime(2023, 2, 5);
+            var obtenerFechaEspecifica = products.Where(p => p.FechaCreacion.Date == fechaABuscar);
 
-            //foreach(var fecha  in obtenerFechaEspecifica)
-            //{
-            //    Console.WriteLine($"{fecha.Nombre} | {fecha.Descripcion} | {fecha.FechaCreacion} ");
-            //}
+            foreach (var fecha in obtenerFechaEspecifica)
+            {
+                Console.WriteLine($"{fecha.Nombre} | {fecha.Descripcion} | {fecha.FechaCreacion} ");
+            }
             #endregion
 
             // 30. Obtener los productos cuya ID sea par
             #region
-            //var ObtenerIdPar = products.Where(p => p.Id % 2 == 0);
+            var ObtenerIdPar = products.Where(p => p.Id % 2 == 0);
 
-            //foreach (var evenId in ObtenerIdPar)
-            //{
-            //    Console.WriteLine($"{evenId.Id} | {evenId.Nombre} | {evenId.Precio}");
-            //}
+            foreach (var evenId in ObtenerIdPar)
+            {
+                Console.WriteLine($"{evenId.Id} | {evenId.Nombre} | {evenId.Precio}");
+            }
             #endregion
 
             // 31. Obtener los productos cuya ID sea impar.
 
             #region
 
-            //var ObtenerIdImpar = products.Where(p => p.Id % 2 == 1);
+            var ObtenerIdImpar = products.Where(p => p.Id % 2 == 1);
 
-            //foreach (var oddId in ObtenerIdImpar)
-            //{
-            //    Console.WriteLine($"{oddId.Id} | {oddId.Nombre} | {oddId.Precio}");
-            //}
+            foreach (var oddId in ObtenerIdImpar)
+            {
+                Console.WriteLine($"{oddId.Id} | {oddId.Nombre} | {oddId.Precio}");
+            }
 
             #endregion
 
             // 32. Obtener los productos cuyo precio tenga un decimal mayor a .50.
 
             #region
-            //var obtenerPrecioDecimal = products.Where(p=> p.Precio %1 > 0.50m);
+            var obtenerPrecioDecimal = products.Where(p => p.Precio % 1 > 0.50m);
 
-            //foreach (var obtenerDecimal in obtenerPrecioDecimal)
-            //{
-            //    Console.WriteLine($"{obtenerDecimal.Id} | {obtenerDecimal.Nombre} | {obtenerDecimal.Precio}");
-            //}
+            foreach (var obtenerDecimal in obtenerPrecioDecimal)
+            {
+                Console.WriteLine($"{obtenerDecimal.Id} | {obtenerDecimal.Nombre} | {obtenerDecimal.Precio}");
+            }
 
             #endregion
 
@@ -444,36 +441,36 @@ namespace LINQ
 
             #region
 
-            //var obtenerNomProd = products.Where(p => p.Nombre.Length > 10);
+            var obtenerNomProd = products.Where(p => p.Nombre.Length > 10);
 
-            //foreach(var prod in obtenerNomProd)
-            //{
-            //    Console.WriteLine($" {prod.Id} | {prod.Nombre} | {prod.Categoria} | {prod.Precio}");
-            //}
+            foreach (var prod in obtenerNomProd)
+            {
+                Console.WriteLine($" {prod.Id} | {prod.Nombre} | {prod.Categoria} | {prod.Precio}");
+            }
             #endregion
 
             // 34. Obtener los productos cuyo stock sea un número primo
 
             #region
 
-            //var obtenerStockPrimos = products.Where(p=> isPrime(p.Id));
+            var obtenerStockPrimos = products.Where(p => isPrime(p.Id));
 
-            //foreach(var primos in obtenerStockPrimos)
-            //{
-            //    Console.WriteLine($"{primos.Id} | {primos.Nombre} | {primos.Precio}");
-            //}
+            foreach (var primos in obtenerStockPrimos)
+            {
+                Console.WriteLine($"{primos.Id} | {primos.Nombre} | {primos.Precio}");
+            }
 
             #endregion
 
             // 35. Obtener los productos cuyo nombre contenga la palabra "Pro".
 
             #region
-            //var productoConPro = products.Where(p => p.Nombre.Contains("Pfro"));
+            var productoConPro = products.Where(p => p.Nombre.Contains("Pfro"));
 
-            //foreach (var p in productoConPro) 
-            //{
-            //    Console.WriteLine($"{p.Id} | {p.Nombre} | {p.Descripcion} ");
-            //}
+            foreach (var p in productoConPro)
+            {
+                Console.WriteLine($"{p.Id} | {p.Nombre} | {p.Descripcion} ");
+            }
 
             #endregion
 
@@ -481,12 +478,12 @@ namespace LINQ
 
             #region
 
-            //var stockMultiploDe5 = products.Where(p => p.Stock%5 == 0);
+            var stockMultiploDe5 = products.Where(p => p.Stock % 5 == 0);
 
-            //foreach(var stock in stockMultiploDe5)
-            //{
-            //    Console.WriteLine($"{stock.Id} | {stock.Nombre} | {stock.Stock}"); 
-            //}
+            foreach (var stock in stockMultiploDe5)
+            {
+                Console.WriteLine($"{stock.Id} | {stock.Nombre} | {stock.Stock}");
+            }
 
             #endregion
 
@@ -494,12 +491,12 @@ namespace LINQ
 
             #region
 
-            //var descripcionMayor20 = products.Where(d => d.Descripcion.Length > 20);
+            var descripcionMayor20 = products.Where(d => d.Descripcion.Length > 20);
 
-            //foreach(var desc in descripcionMayor20)
-            //{
-            //    Console.WriteLine($"{desc.Id} | {desc.Descripcion}");
-            //}
+            foreach (var desc in descripcionMayor20)
+            {
+                Console.WriteLine($"{desc.Id} | {desc.Descripcion}");
+            }
 
             #endregion
 
@@ -507,23 +504,23 @@ namespace LINQ
 
             #region
 
-            //var obtenerNumeroRedondo = products.Where(p => p.Precio % 1 == .00m);
+            var obtenerNumeroRedondo = products.Where(p => p.Precio % 1 == .00m);
 
-            //foreach(var numRedondo in obtenerNumeroRedondo)
-            //{
-            //    Console.WriteLine($"{numRedondo.Id} | {numRedondo.Nombre} | {numRedondo.Precio}");
-            //}
+            foreach (var numRedondo in obtenerNumeroRedondo)
+            {
+                Console.WriteLine($"{numRedondo.Id} | {numRedondo.Nombre} | {numRedondo.Precio}");
+            }
 
             #endregion
 
             // 39. Obtener los productos que tengan exactamente dos palabras en su nombre.
             #region
-            //var productosCon2Palabras = products.Where(p => p.Nombre.Split(" ").Length ==2);
+            var productosCon2Palabras = products.Where(p => p.Nombre.Split(" ").Length == 2);
 
-            //foreach (var palabras in productosCon2Palabras)
-            //{
-            //    Console.WriteLine($"{palabras.Id} | {palabras.Nombre} | {palabras.Precio}");
-            //}
+            foreach (var palabras in productosCon2Palabras)
+            {
+                Console.WriteLine($"{palabras.Id} | {palabras.Nombre} | {palabras.Precio}");
+            }
 
             #endregion
 
@@ -531,12 +528,12 @@ namespace LINQ
 
             #region
 
-            //var productosNoGeneral = products.Where(p => p.Categoria !="General");
+            var productosNoGeneral = products.Where(p => p.Categoria != "General");
 
-            //foreach(var prod in productosNoGeneral)
-            //{
-            //    Console.WriteLine($"{prod.Id} | {prod.Nombre} | {prod.Categoria} ");
-            //}
+            foreach (var prod in productosNoGeneral)
+            {
+                Console.WriteLine($"{prod.Id} | {prod.Nombre} | {prod.Categoria} ");
+            }
 
             #endregion
 
