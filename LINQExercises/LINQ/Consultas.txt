@@ -1,0 +1,43 @@
+﻿//EJERCICIOS
+
+
+// 1. Obtener todos los productos de la lista.
+// 2. Obtener los nombres de todos los productos.
+// 3. Obtener los productos cuyo precio sea mayor a 500.
+// 4. Obtener los productos con stock menor a 10.
+// 5. Obtener los productos de la categoría "Electrónica".
+// 6. Obtener los productos cuyo nombre comience con la letra 'L'.
+// 7. Obtener los productos cuyo precio esté entre 100 y 500.
+// 8. Obtener los productos ordenados por precio ascendente.
+// 9. Obtener los productos ordenados por precio descendente.
+// 10. Obtener los productos ordenados por nombre en orden alfabético.
+// 11. Obtener los productos ordenados por stock de mayor a menor.
+// 12. Obtener los primeros 5 productos más caros.
+// 13. Obtener los 10 productos con menor stock.
+// 14. Obtener la cantidad total de productos en la lista.
+// 15. Obtener la suma de todos los precios de los productos.
+// 16. Obtener el precio promedio de los productos.
+// 17. Obtener el producto más caro.
+// 18. Obtener el producto más barato.
+// 19. Verificar si hay algún producto con precio mayor a 1000.
+// 20. Verificar si todos los productos tienen stock mayor a 5.
+// 21. Contar cuántos productos hay en la categoría "Audio".
+// 22. Agrupar los productos por categoría.
+// 23. Obtener la categoría con más productos.
+// 24. Obtener el stock total de todos los productos.
+// 25. Obtener el producto con el nombre más largo.
+// 26. Obtener el producto con la descripción más corta.
+// 27. Filtrar los productos cuya descripción contenga la palabra "pantalla".
+// 28. Obtener el promedio de stock de los productos de la categoría "Almacenamiento".
+// 29. Obtener los productos creados en una fecha específica (20/12/2022).
+// 30. Obtener los productos cuya ID sea par.
+// 31. Obtener los productos cuya ID sea impar.
+// 32. Obtener los productos cuyo precio tenga un decimal mayor a .50.
+// 33. Obtener los productos cuyo nombre tenga más de 10 caracteres.
+// 34. Obtener los productos cuyo stock sea un número primo.
+// 35. Obtener los productos cuyo nombre contenga la palabra "Pro".
+// 36. Obtener los productos cuyo stock sea un múltiplo de 5.
+// 37. Obtener los productos que tengan una descripción con más de 20 caracteres.
+// 38. Obtener los productos cuyo precio sea un número redondo (sin decimales).
+// 39. Obtener los productos que tengan exactamente dos palabras en su nombre.
+// 40. Obtener la cantidad de productos que no pertenecen a la categoría "General".
